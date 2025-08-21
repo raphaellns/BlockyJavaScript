@@ -1,0 +1,104 @@
+/* Reset & Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Menu (Sidebar) */
+#menu {
+    background-color: #ffffff;
+    width: 220px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#menu h3 {
+    margin: 0 15px 10px 15px;
+    color: #555;
+}
+
+/* Clickable header for dropdowns */
+.clickable-header {
+    width: 100%;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Arrow inside header */
+.clickable-header .arrow {
+    flex-shrink: 0;
+    margin-left: 5px;
+}
+
+.clickable-header:hover {
+    background-color: #e0e0e0;
+}
+
+/* Dropdown content (hidden initially) */
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 10px 10px 10px;
+    margin: 0;
+}
+
+/* Blocks inside dropdowns */
+.dropdown-content .block {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: grab;
+    text-align: center;
+    font-size: 13px;
+    transition: background 0.2s;
+    width: calc(100% - 20px);
+    /* full width minus padding */
+    margin: 0 auto;
+    /* center inside dropdown */
+}
+
+.dropdown-content .block:hover {
+    background-color: #e0e0e0;
+}
+
+/* Main Screen */
+#screen {
+    flex: 1;
+    margin: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#screen h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #444;
+}
