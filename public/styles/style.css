@@ -8,79 +8,42 @@ body {
 
 #container {
     display: flex;
-    height: 100vh;
+    align-items: stretch;
+    height: calc(100vh - 80px);
 }
 
-/* Menu (Sidebar) */
+/* MENU (sidebar) */
 #menu {
     background-color: #ffffff;
-    width: 220px;
+    width: 520px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border-right: 1px solid #ddd;
-    padding: 10px 0;
+    gap: 15px;
+    border-right: 1px solid #359830;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
 }
 
+/* Tittle */
 #menu h3 {
-    margin: 0 15px 10px 15px;
-    color: #555;
-}
-
-/* Clickable header for dropdowns */
-.clickable-header {
-    width: 100%;
-    padding: 10px 10px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    transition: background 0.2s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-}
-
-/* Arrow inside header */
-.clickable-header .arrow {
-    flex-shrink: 0;
-    margin-left: 5px;
-}
-
-.clickable-header:hover {
-    background-color: #e0e0e0;
-}
-
-/* Dropdown content (hidden initially) */
-.dropdown-content {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    padding: 0 10px 10px 10px;
     margin: 0;
+    color: #359830;
+    font-size: 20px;
 }
 
-/* Blocks inside dropdowns */
-.dropdown-content .block {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 8px;
-    border-radius: 5px;
-    cursor: grab;
-    text-align: center;
-    font-size: 13px;
-    transition: background 0.2s;
-    width: calc(100% - 20px);
-    /* full width minus padding */
-    margin: 0 auto;
-    margin-top: 10px;
-    /* center inside dropdown */
-}
-
-.dropdown-content .block:hover {
-    background-color: #e0e0e0;
+/* Code output box */
+#code {
+    flex: 1;
+    background: #2f2f2f;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: "Consolas", monospace;
+    font-size: 14px;
+    overflow-y: auto;
+    border: 1px solid #555;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Main Screen */
@@ -90,18 +53,37 @@ body {
     margin: 20px;
     background-color: #fafafa;
     border-radius: 10px;
-    border-color: #333;
+    border-color: #359830;
     padding: 20px;
     color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    height: calc(100vh - 80px);
 }
+
 
 #screen h3 {
     margin-top: 0;
     margin-bottom: 15px;
     color: #444;
+}
+
+.menu-logo {
+    width: 120px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    font-size: 14px;
+    color: #333;
+    opacity: 0.8;
 }

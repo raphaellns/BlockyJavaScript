@@ -11,40 +11,81 @@
 <body>
     <div id="container">
         <div id="menu">
-            <h3>Blocos</h3>
-
-            <!-- Aba Operações -->
-            <div class="clickable-dropdown">
-                <div class="clickable-header">Operações <span class="arrow">&#9662;</span></div>
-                <div class="dropdown-content">
-                    <div class="block">if</div>
-                    <div class="block">else</div>
-                    <div class="block">for</div>
-                    <div class="block">while</div>
-                    <div class="block">var</div>
-                </div>
-            </div>
-
-            <!-- Aba POO -->
-            <div class="clickable-dropdown">
-                <div class="clickable-header">POO <span class="arrow">&#9662;</span></div>
-                <div class="dropdown-content">
-                    <div class="block">Classe</div>
-                    <div class="block">Objeto</div>
-                    <div class="block">Método</div>
-                    <div class="block">Herança</div>
-                    <div class="block">Encapsulamento</div>
-                    <div class="block">Polimorfismo</div>
-                </div>
-            </div>
+            <img src="/images/IFSul-Logo.png" alt="Logo" class="menu-logo">
+            <h3>Código</h3>
+            <div id="code"></div>
         </div>
 
         <div id="screen">
-            <h3>Tela</h3>
-            <p>Arraste os blocos para cá</p>
+            <h3>Blocos</h3>
+            <p>Monte seu display</p>
+
+            <xml id="toolbox" style="display: none;">
+                <category name="Lógica" colour="#5CA65C">
+                    <block type="controls_if"></block>
+                    <block type="controls_ifelse"></block>
+
+                    <block type="logic_compare"></block>
+                    <block type="logic_operation"></block>
+                    <block type="logic_negate"></block>
+                    <block type="logic_boolean"></block>
+                    <block type="logic_ternary"></block>
+                </category>
+
+                <category name="Variáveis" custom="VARIABLE" colour="#A55EEA"></category>
+
+                <category name="Controle" colour="#E67E22">
+                    <block type="controls_if"></block>
+                    <block type="controls_ifelse"></block>
+
+                    <block type="controls_repeat_ext">
+                        <value name="TIMES">
+                            <shadow type="math_number">
+                                <field name="NUM">10</field>
+                            </shadow>
+                        </value>
+                    </block>
+
+                    <block type="controls_whileUntil"></block>
+
+                    <block type="controls_for">
+                        <field name="VAR">i</field>
+                        <value name="FROM">
+                            <shadow type="math_number">
+                                <field name="NUM">0</field>
+                            </shadow>
+                        </value>
+                        <value name="TO">
+                            <shadow type="math_number">
+                                <field name="NUM">10</field>
+                            </shadow>
+                        </value>
+                        <value name="BY">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                    </block>
+
+                    <block type="controls_flow_statements"></block>
+                </category>
+
+                <category name="Matemática" colour="#2ECC71">
+                    <block type="math_number"></block>
+                    <block type="math_arithmetic"></block>
+                    <block type="math_single"></block>
+                    <block type="math_trig"></block>
+                    <block type="math_number_property"></block>
+                </category>
+
+
+            </xml>
         </div>
     </div>
 
+    <footer>Made by Raphaell Silva</footer>
+
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 

@@ -1,5 +1,9 @@
 const dropHeaders = document.querySelectorAll(".clickable-header");
 
+const workspace = Blockly.inject('screen', {
+    toolbox: document.getElementById('toolbox')
+});
+
 dropHeaders.forEach(header => {
     header.addEventListener("click", () => {
         const dropdownContent = header.nextElementSibling;
