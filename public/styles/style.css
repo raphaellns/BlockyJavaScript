@@ -1,0 +1,116 @@
+/* Reset & Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#container {
+    display: flex;
+    align-items: stretch;
+    height: calc(100vh - 80px);
+}
+
+/* MENU (sidebar) */
+#menu {
+    background-color: #ffffff;
+    width: 520px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: 1px solid #359830;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Tittle */
+#menu h3 {
+    margin: 0;
+    color: #359830;
+    font-size: 20px;
+}
+
+#code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copy-btn {
+    background-color: #359830;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#copy-btn:hover {
+    background-color: #2a7a26;
+}
+
+/* Code output box */
+#code-wrapper {
+    flex: 1;
+    margin: 0;
+    background: #2f2f2f;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: auto;
+    border: 1px solid #555;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#code {
+    font-family: "Consolas", monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Main Screen */
+#screen {
+    border: 1px solid #ccc;
+    flex: 1;
+    margin: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border-color: #359830;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    height: calc(100vh - 80px);
+}
+
+
+#screen h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.menu-logo {
+    width: 120px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    font-size: 14px;
+    color: #333;
+    opacity: 0.8;
+}
