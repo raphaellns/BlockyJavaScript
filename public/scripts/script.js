@@ -1,6 +1,6 @@
 const dropHeaders = document.querySelectorAll(".clickable-header");
 
-const workspace = Blockly.inject('screen', {
+const workspace = Blockly.inject('blocklyDiv', {
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
     zoom: {
@@ -27,6 +27,7 @@ dropHeaders.forEach(header => {
 // JavaScript code and show it on the left panel ("Código").
 const codeElement = document.getElementById('code');
 const copyBtn = document.getElementById('copy-btn');
+const copyLabel = document.getElementById('copy-label');
 
 function updateCode() {
     const code = Blockly.JavaScript.workspaceToCode(workspace);
@@ -51,8 +52,8 @@ updateCode();
 
 copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(codeElement.textContent).then(() => {
-        const original = copyBtn.textContent;
-        copyBtn.textContent = 'Copiado!';
-        setTimeout(() => { copyBtn.textContent = original; }, 1200);
+        const original = copyLabel.textContent;
+        copyLabel.textContent = 'Copiado!';
+        setTimeout(() => { copyLabel.textContent = original; }, 1200);
     });
 });

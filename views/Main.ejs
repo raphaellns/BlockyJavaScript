@@ -1,34 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blocos JS</title>
+    <title>Blocos JS — IFSul</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11/styles/atom-one-dark.min.css">
 </head>
 
 <body>
+    <header id="app-header">
+        <img src="/images/IFSul-Logo.png" alt="Logo IFSul" class="header-logo">
+        <div class="header-text">
+            <h1>Blocos JS</h1>
+            <span>Programação visual com geração de código em tempo real</span>
+        </div>
+    </header>
+
     <div id="container">
         <div id="menu">
-            <img src="/images/IFSul-Logo.png" alt="Logo" class="menu-logo">
             <div id="code-header">
-                <h3>Código</h3>
-                <button id="copy-btn" type="button" title="Copiar código">Copiar</button>
+                <h3>Código gerado</h3>
+                <button id="copy-btn" type="button" title="Copiar código">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span id="copy-label">Copiar</span>
+                </button>
             </div>
             <pre id="code-wrapper"><code id="code" class="language-javascript"></code></pre>
         </div>
 
         <div id="screen">
-            <h3>Blocos</h3>
-            <p>Monte seu display</p>
+            <h3>Área de Blocos</h3>
+            <p>Monte os blocos para montar a lógica do seu programa</p>
+
+            <div id="blocklyDiv"></div>
 
             <xml id="toolbox" style="display: none;">
                 <category name="Lógica" colour="#5CA65C">
                     <block type="controls_if"></block>
                     <block type="controls_ifelse"></block>
-
                     <block type="logic_compare"></block>
                     <block type="logic_operation"></block>
                     <block type="logic_negate"></block>
@@ -41,7 +63,6 @@
                 <category name="Controle" colour="#E67E22">
                     <block type="controls_if"></block>
                     <block type="controls_ifelse"></block>
-
                     <block type="controls_repeat_ext">
                         <value name="TIMES">
                             <shadow type="math_number">
@@ -49,9 +70,7 @@
                             </shadow>
                         </value>
                     </block>
-
                     <block type="controls_whileUntil"></block>
-
                     <block type="controls_for">
                         <field name="VAR">i</field>
                         <value name="FROM">
@@ -70,7 +89,6 @@
                             </shadow>
                         </value>
                     </block>
-
                     <block type="controls_flow_statements"></block>
                 </category>
 
@@ -83,12 +101,11 @@
                 </category>
 
                 <category name="Funções" colour="#9A5CB4" custom="PROCEDURE"></category>
-
             </xml>
         </div>
     </div>
 
-    <footer>Made by Raphaell Silva</footer>
+    <footer>Desenvolvido por <strong>Raphaell Silva</strong> · IFSul</footer>
 
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
