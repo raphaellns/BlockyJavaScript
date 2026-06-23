@@ -62,7 +62,7 @@ Depois disso, acesse **http://localhost:3000** no navegador.
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Raphaell Nunes Silva**
+Desenvolvido por **Raphaell Silva**
 - GitHub: [@raphaellns](https://github.com/raphaellns)
 
 ## 🏫 Contexto acadêmico
