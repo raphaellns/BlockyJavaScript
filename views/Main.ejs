@@ -100,6 +100,20 @@
                     <block type="math_number_property"></block>
                 </category>
 
+                <category name="Entrada/Saída" colour="#3498DB">
+                    <block type="text">
+                        <field name="TEXT">texto</field>
+                    </block>
+                    <block type="io_console_log"></block>
+                    <block type="io_read_input">
+                        <value name="PROMPT">
+                            <shadow type="text">
+                                <field name="TEXT">Digite algo: </field>
+                            </shadow>
+                        </value>
+                    </block>
+                </category>
+
                 <category name="Funções" colour="#9A5CB4" custom="PROCEDURE"></category>
             </xml>
         </div>
@@ -110,6 +124,7 @@
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
     <script src="scripts/blockly-js-style.js"></script>
+    <script src="scripts/blockly-io-blocks.js"></script>
     <script src="https://unpkg.com/@highlightjs/cdn-assets@11/highlight.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
